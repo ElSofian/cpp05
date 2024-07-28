@@ -8,7 +8,7 @@ RM			= rm -rf
 
 OBJS_DIR	= bin
  
-SRCS		= Bureaucrat.cpp AForm.cpp main.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp
+SRCS		= Bureaucrat.cpp AForm.cpp main.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #

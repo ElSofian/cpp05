@@ -2,6 +2,7 @@
 # include "PresidentialPardonForm.hpp"
 # include "RobotomyRequestForm.hpp"
 # include "ShrubberyCreationForm.hpp"
+# include "Intern.hpp"
 
 int main()
 {
@@ -39,8 +40,24 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+
+    std::cout << std::endl << "==INTERN TEST==" << std::endl;
+    Intern stupidIntern = Intern();
+    AForm *a4 = stupidIntern.makeForm("robotomy request", "Bender");
+    if (a4 != NULL) {
+        try {
+            test.signForm(*a4);
+            test.executeForm(*a4);
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
+
     delete a1;
     delete a2;
     delete a3;
+	delete a4;
     return 0;
 }

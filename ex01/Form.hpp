@@ -8,10 +8,10 @@ class Bureaucrat;
 
 class Form {
 	private:
-		std::string const _name;
-		bool _signed;
-		unsigned int const _signGradeRequired;
-		unsigned int const _execGradeRequired;
+		std::string const	_name;
+		bool 				_signed;
+		unsigned int const	_signGradeRequired;
+		unsigned int const	_execGradeRequired;
 
 	public:
 		Form();
@@ -42,5 +42,7 @@ class Form {
 				}
 		};
 };
+
+std::ostream &operator<<(std::ostream &out, Bureaucrat const &obj);
 
 #endif

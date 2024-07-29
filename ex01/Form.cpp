@@ -38,8 +38,12 @@ unsigned int Form::getExecGradeRequired() const {
 }
 
 void Form::beSigned(Bureaucrat &bureaucrat) {
-	std::cout << "grade: " << bureaucrat.getGrade() << std::endl;
 	if (bureaucrat.getGrade() > _signGradeRequired)
 		throw Form::GradeTooLowException();
 	_signed = true;
+}
+
+std::ostream &operator<<(std::ostream &stream, const Form &src)
+{
+    return stream << src.getName() << ", Form signature grade: " << src.getSignGradeRequired() << ", Form exec grade: " << src.getExecGradeRequired() << ", Signature statuts: " << src.getSigned();
 }
